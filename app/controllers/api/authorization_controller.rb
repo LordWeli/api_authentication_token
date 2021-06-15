@@ -2,7 +2,7 @@ class Api::AuthorizationController < ApplicationController
   before_action :verify_authenticity
 
   def verify_authenticity
-    return render json: { error: 'Invalid Token!', status: 401} unless verify_token
+    return render json: { error: 'Invalid Token!', status: 401 } unless verify_token
   end
 
   private

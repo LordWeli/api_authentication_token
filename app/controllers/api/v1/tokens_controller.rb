@@ -3,7 +3,7 @@ class Api::V1::TokensController < Api::AuthorizationController
     @tokens = Token.all
 
     unless token_params.blank?
-      @tokens = @tokens.where(token_params)
+      @tokens = @tokens.where(convert_params(token_params))
     end
 
     render json: @tokens
@@ -27,5 +27,17 @@ class Api::V1::TokensController < Api::AuthorizationController
     return [] if params[:token].blank?
 
     params.require(:token).permit(:responsible, :hash_token)
+  end
+
+  def convert_params(value)
+    if value[:hash_token].nil?
+      return value
+    else
+      hash_value = { hash_token: DecodeBase64CharacterService.new.decode_characters(value[:hash_token]) }
+      hash_value[:responsible] = value[:responsible] unless value[:responsible].nil?
+
+      return hash_value
+    end
+
   end
 end
