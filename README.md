@@ -1,24 +1,22 @@
-# README
+# API AUTHENTICATION TOKEN
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+---
 
-Things you may want to cover:
+Content Index
+=================
+- [Sobre](#about)
+<!-- - [Como Utilizar](#how-to-use)
+- [Tecnologias Utilizadas](#technology-used) -->
+- [Licença](#license)
 
-* Ruby version
+---
 
-* System dependencies
+## <a name="about"></a>Sobre
+  Sistema baseado em gerenciamento de tokens em base64 para acessos de outras API's e módulos internos.
 
-* Configuration
+<!-- ## <a name="how-to-use"></a>Como Utilizar
 
-* Database creation
+## <a name="technology-used"></a>Tecnologias Utilizadas -->
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## <a name="license"></a>Licença
+  API AUTHENTICATION TOKEN é liberado sob a licença [MIT License](https://opensource.org/licenses/MIT).
